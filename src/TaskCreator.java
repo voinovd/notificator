@@ -11,9 +11,10 @@ public class TaskCreator {
 
     public static final String FILE_SEPARATOR = ";";
 
-    public List<Task> createTaskListFromFile(String pathToFile) {
+    public List<Task> createTaskListForUserFromFile(User user) {
         List<Task> tasks = new ArrayList<>();
 
+        String pathToFile = user.getPathToTasksFile();
         if ( pathToFile == null ) {
             return tasks;
         }
